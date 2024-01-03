@@ -4,9 +4,7 @@
 -- They conducted a survey in those 10 cities and received results from 10k respondents. 
 -- Convert these survey results to meaningful insights which the team can use to drive actions.
 
-DROP tables dim_repondents;
 USE energy_drink_project;
-
 SELECT * FROM dim_repondents;
 
 SELECT * FROM fact_survey_responses;
@@ -89,6 +87,7 @@ GROUP BY Typical_consumption_situations
 ORDER BY COUNT DESC;
 
 # What factors influence respondents' purchase decisions, such as price range and limited edition packaging?
+
 SELECT Limited_edition_packaging,
 COUNT(*) AS COUNT
 FROM fact_survey_responses
